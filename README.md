@@ -16,7 +16,7 @@ The Random class has a constructor that accepts the seed value. Seed is a a star
 
 An example of random numbers would be Fisher-Yates algorithm:
 ```c#
-  Fisher-Yates shuffle
+    Fisher-Yates shuffle
     private static Random rng = new Random();
 
     public static void Shuffle<T>(this IList<T> list)
