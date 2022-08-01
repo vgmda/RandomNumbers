@@ -13,3 +13,22 @@ The Random class has a constructor that accepts the seed value. Seed is a a star
 | Next(int, int) | Returns a positive random integer within the specified minimum and maximum range (includes min and excludes max). |
 | NextDouble() | Generates random floating-point number that is greater than or equal to 0.0 and less than 1.0. |
 | NextByte() | Fills the specified array with the random bytes. |
+
+An example of random numbers would be Fisher-Yates algorithm:
+```c#
+  Fisher-Yates shuffle
+    private static Random rng = new Random();
+
+    public static void Shuffle<T>(this IList<T> list)
+    {
+        int n = list.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            T value = list[k];
+            list[k] = list[n];
+            list[n] = value;
+        }
+    }
+   ```
