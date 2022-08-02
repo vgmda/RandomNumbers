@@ -10,6 +10,8 @@ class Program
         //{
         //    //SimpleMethod(random);
         //    Console.WriteLine(random.NextDouble() * 10);
+        //    int rand_num = random.Next(100, 200);
+        //    Console.WriteLine("Random number: {0}", n);
         //}
 
         List<PersonModel> people = new List<PersonModel>
