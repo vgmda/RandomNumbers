@@ -32,6 +32,7 @@ public static void Shuffle<T>(this IList<T> list)
     }
 }
 ```
+A very similar algorithm to Fisher-Yates which produces a shuffled version of input is Sattolo's algorithm. Instead of picking an element at random to swap with, like in Fisher-Yates, it picks an element at random that is not the element being placed, i.e it does not allow an element to be swapped with itself. One side effect of this is that no element ends up where it originally started. 
 ```c#
 // Sattolo's algorithm
 private static readonly Random Rand = new Random();
