@@ -14,7 +14,7 @@ The Random class has a constructor that accepts the seed value. Seed is a a star
 | NextDouble() | Generates random floating-point number that is greater than or equal to 0.0 and less than 1.0. |
 | NextByte() | Fills the specified array with the random bytes. |
 
-An example of random numbers would be Fisher-Yates algorithm:
+Random permutations can be generated using Fisher-Yates shuffle algorithm. Time is taken proportionally to the toal number of items being shuffled and shuffles them in place. The algorithm swaps the element at each iteration at random among all remaining unvisted indices, including the element itself. 
 ```c#
   Fisher-Yates shuffle
   private static Random rng = new Random();
