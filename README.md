@@ -16,7 +16,7 @@ The Random class has a constructor that accepts the seed value. Seed is a a star
 
 Random permutations can be generated using Fisher-Yates shuffle algorithm. Time is taken proportionally to the toal number of items being shuffled and shuffles them in place. The algorithm swaps the element at each iteration at random among all remaining unvisted indices, including the element itself. 
 ```c#
-Fisher-Yates shuffle
+// Fisher-Yates shuffle
 private static Random rng = new Random();
 
 public static void Shuffle<T>(this IList<T> list)
@@ -33,7 +33,7 @@ public static void Shuffle<T>(this IList<T> list)
 }
 ```
 ```c#
-Sattolo's algorithm
+// Sattolo's algorithm
 private static readonly Random Rand = new Random();
 
 void sattoloCycle<T>(IList<T> items) 
